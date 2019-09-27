@@ -1,4 +1,4 @@
-# SchuleReisverschlussverfahren
+# Reisverschlussverfahren 
 Q1 (SI) Informatik GK
 
 Unterichtsmaterial (C) AzraAnimating
