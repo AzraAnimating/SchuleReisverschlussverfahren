@@ -30,10 +30,11 @@ public class GUI_project extends JFrame {
     private JTextArea jtKennzeichenListeRechts;
     private JTextField jtLinksKennzeichen;
     private JTextField jtRechtsKennzeichen;
-
+    private Autobahn a;
     //Constructor 
-    public GUI_project(){
+    public GUI_project(Autobahn pA){
 
+        a = pA;
         this.setTitle("GUI_project");
         this.setSize(628,493);
         //menu generate method
@@ -135,8 +136,23 @@ public class GUI_project extends JFrame {
         this.setLocationRelativeTo(null);
         this.pack();
         this.setVisible(true);
-    }
+        
+        jButtonLeft.addActionListener(new ActionListener()
+        {
+            public void actionPerformed(ActionEvent e)
+            {
+                a.autosErstellenLinks
+            }
+          } 
+        );
+   }
 
+    public void addAutoRechts()
+    {
+        //jRechteSpur.
+    }
+    
+    
     //method for generate menu
     public void generateMenu(){
         menuBar = new JMenuBar();
@@ -147,15 +163,16 @@ public class GUI_project extends JFrame {
 
     }
 
-
+       /*
 
      public static void main(String[] args){
         System.setProperty("swing.defaultlaf", "com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel");
         javax.swing.SwingUtilities.invokeLater(new Runnable() {
             public void run() {
-                new GUI_project();
+                new GUI_project(Autobahn a);
             }
         });
     }
+    */
 
 }
