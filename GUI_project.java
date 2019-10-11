@@ -137,19 +137,31 @@ public class GUI_project extends JFrame {
         this.pack();
         this.setVisible(true);
         
-        jButtonLeft.addActionListener(new ActionListener()
+        buttonLeft.addActionListener(new ActionListener()
         {
             public void actionPerformed(ActionEvent e)
             {
-                a.autosErstellenLinks
+                a.autoErstellenLinks(jtLinksKennzeichen.getText());
+            }
+          } 
+        );
+        buttonRight.addActionListener(new ActionListener()
+        {
+            public void actionPerformed(ActionEvent e)
+            {
+                a.autoErstellenRechts(jtRechtsKennzeichen.getText());
             }
           } 
         );
    }
 
-    public void addAutoRechts()
+    public void addAutoLinks(String pKennzeichen)
     {
-        //jRechteSpur.
+        jtKennzeichenListeLinks.setText(pKennzeichen);
+    }
+    public void addAutoRechts(String pKennzeichen)
+    {
+        jtKennzeichenListeRechts.setText(pKennzeichen);
     }
     
     
